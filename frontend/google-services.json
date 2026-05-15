@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "621266409118",
+    "project_id": "dengueapp-48c45",
+    "storage_bucket": "dengueapp-48c45.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621266409118:android:2f8b1d3f57d12970fdcd8f",
+        "android_client_info": {
+          "package_name": "com.janani.dengueapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCofcWV89tsXYvOmK-hp7nTu4vpize3mc4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

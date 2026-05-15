@@ -1,0 +1,29 @@
+﻿Running 17 checks on your project...
+16/17 checks passed. 1 checks failed. Possible issues detected:
+Use the --verbose flag to see more details about passed checks.
+
+Γ£û Check for issues with Metro config
+- "resolver.sourceExts" and "resolver.assetExts" miss values from Expo's default extensions
+Advice:
+Modifying the "metro.config.js" is dangerous and may lead to unintended consequences.
+Unless you know what these overrides do, remove them and adopt the recommended values from "expo/metro-config".
+
+node.exe : 1 check failed, 
+indicating possible issues 
+with the project.
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
+    + CategoryInfo           
+   : NotSpecified: (1 check  
+   failed,...th the projec   
+ t.:String) [], RemoteExc    
+eption
+    + FullyQualifiedErrorId  
+   : NativeCommandError
+ 

@@ -1,0 +1,49 @@
+services:
+  # Python Flask Backend
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: dengue-backend:latest
+    container_name: dengue_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - PORT=5000
+    # Loading environment variables from the root .env file
+    env_file:
+      - .env
+    volumes:
+      - ./backend:/app # Hot-reloading: Bind local backend directory to /app
+    networks:
+      - dengue-network
+
+  # Expo Frontend
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: dengue-frontend:latest
+    container_name: dengue_frontend
+    ports:
+      - "8081:8081"
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+    environment:
+      - EXPO_DEVTOOLS_LISTEN_ADDRESS=0.0.0.0
+      - REACT_NATIVE_PACKAGER_HOSTNAME=localhost # Or your computer's IP for mobile development
+    env_file:
+      - .env
+    volumes:
+      - ./frontend:/app # Bind local frontend directory to /app
+      - /app/node_modules # Don't overwrite container's node_modules with local ones
+    networks:
+      - dengue-network
+    depends_on:
+      - backend
+
+networks:
+  dengue-network:
+    driver: bridge
